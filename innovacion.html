@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovación - Agroelsalado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar-solid {
+            background: #1f2937 !important;
+            padding: 15px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        main {
+            padding-top: 80px; /* offset for fixed navbar */
+        }
+
+        /* Innovacion Page Styles */
+        .innovacion-hero {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            padding: 120px 8% 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .innovacion-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(92,186,46,0.15) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .innovacion-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .innovacion-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #5cba2e, #86d359);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease;
+        }
+
+        .innovacion-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .innovacion-section {
+            padding: 80px 8%;
+            background: #fdfdfc;
+        }
+
+        .innovacion-section.alt {
+            background: #f5f7f2;
+        }
+
+        .gromo-feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gromo-feature.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .gromo-text {
+            flex: 1;
+        }
+
+        .gromo-text h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .gromo-text h2 span {
+            color: #5cba2e;
+        }
+
+        .gromo-text p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .gromo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gromo-list li {
+            font-size: 1.05rem;
+            color: #4b5563;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .gromo-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #5cba2e;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .gromo-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .gromo-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .gromo-image img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(92, 186, 46, 0.15);
+        }
+
+        .gestion-actual {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #315f1c, #4a8a28);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .section-title p {
+            color: #6b7280;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gestion-actual img {
+            max-width: 100%;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background: #111827;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 992px) {
+            .gromo-feature, .gromo-feature.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .gromo-list li {
+                text-align: left;
+            }
+            
+            .innovacion-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-solid">
+            <div class="logo">Agroelsalado</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#novedades">Novedades</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="innovacion-hero">
+            <div class="innovacion-hero-content">
+                <h1>Innovación Tecnológica con <span>Gromo</span></h1>
+                <p>Digitalizamos y simplificamos la gestión agropecuaria para que tengas el control total de tu campo en la palma de tu mano.</p>
+            </div>
+        </section>
+
+        <!-- GESTION ACTUAL -->
+        <section class="innovacion-section">
+            <div class="gestion-actual">
+                <div class="section-title">
+                    <h2>La gestión actual quedó en el pasado</h2>
+                    <p>Dejá atrás los cuadernos, los comprobantes en papel que se pierden y las planillas de Excel desactualizadas. Es hora de dar un salto de innovación.</p>
+                </div>
+                <!-- IMAGEN 1: Gestión actual -->
+                <img src="img/gromo-gestion.png" alt="Gestión Actual: Cuadernos, Comprobantes, Excel" onerror="this.src='https://via.placeholder.com/900x400/f5f7f2/1f2937?text=Subir+imagen+1+(Gestión+actual)+como+gromo-gestion.png'">
+            </div>
+        </section>
+
+        <!-- WHATSAPP CHATBOT -->
+        <section class="innovacion-section alt">
+            <div class="gromo-feature">
+                <div class="gromo-text">
+                    <h2>Carga de datos fácil por <span>WhatsApp</span></h2>
+                    <p>Nuestra integración exclusiva con Gromo te permite registrar las operaciones de tu campo desde cualquier lugar, enviando un simple mensaje. El asistente inteligente procesa la información al instante.</p>
+                    <ul class="gromo-list">
+                        <li>Envío de fotos de tickets de balanza y carga automática de datos.</li>
+                        <li>Registro de certificados electrónicos (AFIP) con lectura de códigos.</li>
+                        <li>Asignación inmediata de la cosecha a su lote correspondiente.</li>
+                        <li>Sin necesidad de instalar aplicaciones complejas ni capacitaciones extensas.</li>
+                    </ul>
+                    <div style="margin-top: 40px;">
+                        <img src="img/gromo-carga-whatsapp.png" alt="Cargá fotos, archivos, mensajes, audios" style="width: 100%; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" onerror="this.src='https://via.placeholder.com/800x400/1f2937/ffffff?text=Subir+imagen+(Cargá+fotos)+como+gromo-carga-whatsapp.png'">
+                    </div>
+                </div>
+                <div class="gromo-image">
+                    <!-- IMAGEN 2: WhatsApp Chatbot -->
+                    <img src="img/gromo-whatsapp.png" alt="Gestión de campo por WhatsApp" onerror="this.src='https://via.placeholder.com/600x800/1f2937/ffffff?text=Subir+imagen+2+(WhatsApp)+como+gromo-whatsapp.png'">
+                </div>
+            </div>
+        </section>
+
+        <!-- COSTOS POR LOTE -->
+        <section class="innovacion-section">
+            <div class="gromo-feature reverse">
+                <div class="gromo-text">
+                    <h2>Control exacto de <span>Costos por Lote</span></h2>
+                    <p>Visualizá la rentabilidad real de cada porción de tu tierra. Gromo centraliza los gastos y los ingresos, brindándote un panel de control claro y detallado para la toma de decisiones.</p>
+                    <ul class="gromo-list">
+                        <li>Métricas de costo total actualizadas en tiempo real.</li>
+                        <li>Registro de actividad reciente: compras de insumos, pagos y más.</li>
+                        <li>Estado de cada lote y stock de cereales unificado.</li>
+                        <li>Visión clara del margen bruto y neto por campaña.</li>
+                    </ul>
+                </div>
+                <div class="gromo-image">
+                    <!-- IMAGEN 3: Dashboard Costos -->
+                    <img src="img/gromo-costos.png" alt="Dashboard de Costos por Lote" onerror="this.src='https://via.placeholder.com/800x600/1f2937/ffffff?text=Subir+imagen+3+(Costos)+como+gromo-costos.png'">
+                </div>
+            </div>
+        </section>
+
+        <!-- COSECHA -->
+        <section class="innovacion-section alt">
+            <div class="gromo-feature">
+                <div class="gromo-text">
+                    <h2>Trazabilidad total de tu <span>Cosecha</span></h2>
+                    <p>Monitoreá cada camión que sale de tu campo. El panel de Cosecha te da tranquilidad y transparencia, agrupando toda la información de fletes y acopios en un solo lugar.</p>
+                    <ul class="gromo-list">
+                        <li>Listado completo de cargas con peso neto y cereal.</li>
+                        <li>Trazabilidad por número de CTG.</li>
+                        <li>Estado de la documentación respaldatoria.</li>
+                        <li>Filtros avanzados por campaña, lote, acopio o fechas.</li>
+                    </ul>
+                </div>
+                <div class="gromo-image">
+                    <!-- IMAGEN 4: Dashboard Cosecha -->
+                    <img src="img/gromo-cosecha.png" alt="Dashboard de Cargas de Cosecha" onerror="this.src='https://via.placeholder.com/800x600/1f2937/ffffff?text=Subir+imagen+4+(Cosecha)+como+gromo-cosecha.png'">
+                </div>
+            </div>
+        </section>
+
+        <!-- STOCK INSUMOS -->
+        <section class="innovacion-section">
+            <div class="gromo-feature reverse">
+                <div class="gromo-text">
+                    <h2>Gestión inteligente de <span>Stock</span></h2>
+                    <p>Llevá un inventario preciso de todos tus insumos. El panel de Stock te permite conocer la disponibilidad real de tus productos, su valorización y los movimientos pendientes con total claridad.</p>
+                    <ul class="gromo-list">
+                        <li>Control detallado de litros, kilos y unidades disponibles.</li>
+                        <li>Valorización automática del inventario total.</li>
+                        <li>Seguimiento de remitos y movimientos pendientes.</li>
+                        <li>Buscador rápido para encontrar cualquier insumo al instante.</li>
+                    </ul>
+                </div>
+                <div class="gromo-image">
+                    <!-- IMAGEN 5: Dashboard Stock -->
+                    <img src="img/gromo-stock.png" alt="Dashboard de Stock de Insumos" onerror="this.src='https://via.placeholder.com/800x600/1f2937/ffffff?text=Subir+imagen+5+(Stock)+como+gromo-stock.png'">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Agroelsalado</p>
+    </footer>
+</body>
+</html>

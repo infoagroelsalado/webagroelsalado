@@ -1,0 +1,29 @@
+{
+    "fecha_actualizacion": "2026-06-15 22:08:53",
+    "dolares": {
+        "blue": {
+            "compra": "$1,440.00",
+            "venta": "$1,460.00"
+        },
+        "mayorista": {
+            "compra": "$1,419.00",
+            "venta": "$1,428.00"
+        },
+        "mep": {
+            "compra": "N/A",
+            "venta": "N/A"
+        },
+        "oficial": {
+            "compra": "$1,400.00",
+            "venta": "$1,450.00"
+        }
+    },
+    "granos": {
+        "soja": "$471,240.00 ($460.200 Ref)",
+        "trigo": "$307,020.00 ($300.000 Ref)",
+        "maiz": "$257,040.00 ($249.500 Ref)",
+        "soja_usd": "USD 330",
+        "trigo_usd": "USD 215",
+        "maiz_usd": "USD 180"
+    }
+}

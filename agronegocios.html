@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronegocios - Agroelsalado</title>
+    <link rel="stylesheet" href="styles.css?v=1786328583">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar-solid {
+            background: #1f2937 !important;
+            padding: 15px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        main {
+            padding-top: 80px; /* offset for fixed navbar */
+            min-height: calc(100vh - 80px - 80px); /* Fill screen minus nav and footer */
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-solid">
+            <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">Agroelsalado</a></div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html#servicios">Servicios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="agronegocios.html">Agronegocios</a></li>
+                        <li><a href="consultoria.html">Consultoría</a></li>
+                        <li><a href="index.html#inmobiliarios">Negocios Inmobiliarios</a></li>
+                    </ul>
+                </li>
+                <li><a href="innovacion.html">Innovación</a></li>
+                <li><a href="index.html#novedades">Novedades</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agronegocios-section" id="agronegocios">
+            <div class="agro-header">
+                <h2>Asesoramiento a<br>productores<br>agropecuarios</h2>
+                <p>Acompañamos a empresas y productores agropecuarios con asesoramiento estratégico, ayudándolos a optimizar su gestión, mejorar su rentabilidad y adaptarse a modelos de producción sustentable</p>
+            </div>
+            
+            <div class="agro-grid">
+                <div class="agro-col left-col">
+                    <!-- Asesoramiento técnico -->
+                    <div class="agro-item">
+                        <div class="agro-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M18 8h5"></path>
+                                <path d="M18 12h3"></path>
+                                <path d="M22 6a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2l-3 3v-3h-1a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4z"></path>
+                            </svg>
+                        </div>
+                        <div class="agro-text">
+                            <h3>Asesoramiento técnico</h3>
+                            <p>Te acompañamos en la planificación y gestión eficiente de tus proyectos agrícolas, ganaderos y forestales.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Asesoramiento legal -->
+                    <div class="agro-item" style="margin-top: 40px;">
+                        <div class="agro-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                                <path d="M19 3v18"></path>
+                                <path d="M3 19h18"></path>
+                            </svg>
+                        </div>
+                        <div class="agro-text">
+                            <h3>Asesoramiento legal</h3>
+                            <p>Elaboración de contratos agropecuarios adaptados a tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agro-col right-col">
+                    <!-- Análisis y monitoreo -->
+                    <div class="agro-item align-start">
+                        <div class="agro-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                            </svg>
+                        </div>
+                        <div class="agro-text">
+                            <h3>Análisis, monitoreo y auditorías técnicas</h3>
+                            <div class="agro-sub-item">
+                                <p><strong>Servicios agrícolas:</strong> desde la planificación de rotaciones y análisis de suelos hasta el monitoreo de cultivos y control integral de cosechas.</p>
+                            </div>
+                            <div class="agro-sub-item">
+                                <p><strong>Servicios ganaderos:</strong> diseño de dietas personalizadas, optimización de pastoreo racional y desarrollo de balances forrajeros eficientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agroelsalado. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

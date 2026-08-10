@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alambrados virtuales - Agroelsalado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-page {
+            padding: 120px 8% 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 70vh;
+        }
+        .article-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .article-category {
+            color: #5cba2e;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .article-date {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        .article-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .article-content {
+            font-size: 1.15rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #3f7d20;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: rgba(92, 186, 46, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(92, 186, 46, 0.2);
+            color: #315f1c;
+        }
+        .navbar-solid {
+            background: #1f2937 !important;
+            padding: 15px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-solid">
+            <div class="logo">Agroelsalado</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#novedades">Novedades</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-page">
+        <div class="article-header">
+            <span class="article-category">Ganadería</span>
+            <h1 class="article-title">¿Qué son los alambrados virtuales?</h1>
+            <span class="article-date">12 May 2026</span>
+        </div>
+        
+        <img src="img/Alambrados1.jpg" alt="Alambrados Virtuales" class="article-image" onerror="this.src='https://images.unsplash.com/photo-1544605470-381c1fb8286a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+
+        <div class="article-content">
+            <p>Los alambrados virtuales son sistemas tecnológicos que reemplazan o complementan los cercos tradicionales mediante límites digitales definidos en un mapa. En lugar de postes y alambres, se utilizan dispositivos electrónicos (generalmente collares con GPS), que permiten controlar el movimiento de los animales dentro de un área determinada.</p>
+            <p>Cuando el animal se aproxima al límite virtual, el sistema emite primero una señal sonora y, si continúa avanzando, aplica una corrección eléctrica de baja intensidad, similar a la utilizada en cercos eléctricos convencionales.</p>
+            <p>Todo el manejo se realiza desde una aplicación o plataforma digital, donde el productor puede mover, ampliar o modificar los potreros en tiempo real.</p>
+            
+            <a href="index.html#novedades" class="back-link">&larr; Volver a Novedades</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Agroelsalado</p>
+    </footer>
+</body>
+</html>
