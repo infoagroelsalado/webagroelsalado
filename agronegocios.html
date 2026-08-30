@@ -52,7 +52,7 @@
             <div class="agro-grid">
                 <div class="agro-col left-col">
                     <!-- Asesoramiento técnico -->
-                    <div class="agro-item">
+                    <div class="agro-item" style="cursor: pointer;" onclick="const d = document.getElementById('asesoramiento-dropdown'); const icon = document.getElementById('asesoramiento-icon'); if(d.style.display === 'none') { d.style.display = 'block'; icon.style.transform = 'rotate(180deg)'; } else { d.style.display = 'none'; icon.style.transform = 'rotate(0deg)'; }">
                         <div class="agro-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -63,8 +63,17 @@
                             </svg>
                         </div>
                         <div class="agro-text">
-                            <h3>Asesoramiento técnico</h3>
+                            <h3 style="display: flex; align-items: center; gap: 10px;">Asesoramiento técnico <span id="asesoramiento-icon" style="font-size: 0.8rem; transition: transform 0.3s ease;">▼</span></h3>
                             <p>Te acompañamos en la planificación y gestión eficiente de tus proyectos agrícolas, ganaderos y forestales.</p>
+                            
+                            <div id="asesoramiento-dropdown" style="display: none; margin-top: 20px; background: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
+                                <p style="margin-bottom: 15px; font-weight: 600; font-size: 1.05rem; color: #fff;">¿Sobre qué área necesitás asesoramiento?</p>
+                                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                                    <li><a href="index.html#contacto" style="color: #aebc1a; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;" onmouseover="this.style.color='#cddf1e'" onmouseout="this.style.color='#aebc1a'"><span>&rarr;</span> Proyecto Agrícola</a></li>
+                                    <li><a href="index.html#contacto" style="color: #aebc1a; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;" onmouseover="this.style.color='#cddf1e'" onmouseout="this.style.color='#aebc1a'"><span>&rarr;</span> Proyecto Ganadero</a></li>
+                                    <li><a href="index.html#contacto" style="color: #aebc1a; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;" onmouseover="this.style.color='#cddf1e'" onmouseout="this.style.color='#aebc1a'"><span>&rarr;</span> Proyecto Forestal</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
