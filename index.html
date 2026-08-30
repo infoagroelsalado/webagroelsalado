@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css?v=1781930757">
     <link rel="stylesheet" href="equipo-estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS para el carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -36,20 +40,20 @@
 
 
     <section class="services" id="servicios">
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
             <h2>Nuestros servicios</h2>
             <p>Servicios profesionales adaptados al agro.</p>
         </div>
         <div class="cards">
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <h3>Monitoreo Estratégico</h3>
                 <p>Planificación y seguimiento de cultivos.</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <h3>Asesoramiento Agropecuario</h3>
                 <p>Soluciones integrales para productores agropecuarios.</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <h3>Gestión Agropecuaria</h3>
                 <p>Optimización de recursos y procesos.</p>
             </div>
@@ -58,10 +62,10 @@
 
 
     <section class="about" id="nosotros">
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
             <h2>Compromiso con el agro</h2>
         </div>
-        <div class="about-content">
+        <div class="about-content" data-aos="zoom-in">
             <p>
                 En Agroelsalado acompañamos productores y empresas
                 con herramientas innovadoras y atención personalizada.
@@ -106,20 +110,20 @@
 
     <!-- SECCION AGRO ESTRATEGICO -->
     <section class="strategic-section" id="agro-estrategico">
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
             <h2>Agro Estratégico</h2>
             <p>Nuestros pilares fundamentales y hacia dónde vamos.</p>
         </div>
         <div class="cards">
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <h3>Misión</h3>
                 <p>Liderar la transformación del agro creando soluciones inteligentes que impulsan productividad, innovación y crecimiento sostenible. </p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <h3>Visión</h3>
                 <p>Desarrollar una comunidad colaborativa que integra talento, inversión y futuro para impulsar nuevas oportunidades de crecimiento.</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <h3>Valores</h3>
                 <p>Asumimos cada desafío con responsabilidad, profesionalismo y enfoque en resultados.</p>
             </div>
@@ -127,83 +131,110 @@
     </section>
 
     <!-- SECCION NOVEDADES -->
-    <section class="news-section" id="novedades">
-        <div class="section-title">
+    <section class="news-section" id="novedades" style="overflow: hidden; padding-bottom: 80px;">
+        <div class="section-title" data-aos="fade-up">
             <h2>Novedades del Agro</h2>
             <p>Mantenete informado con las últimas noticias y tendencias del sector agropecuario.</p>
         </div>
-        <div class="news-container">
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/maiz.png" alt="Resultados de la cosecha de maíz" onerror="this.src='https://via.placeholder.com/400x250'">
+        
+        <div class="swiper swiper-container news-slider" data-aos="fade-up" data-aos-delay="200" style="padding: 20px; max-width: 1400px; margin: 0 auto;">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/maiz.png" alt="Resultados de la cosecha de maíz" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Agricultura</span>
+                            <h3>Resultados de la cosecha de maíz</h3>
+                            <p>Análisis de los rindes obtenidos y las perspectivas para la comercialización del grano en la región.</p>
+                            <a href="nota-maiz.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-                <div class="news-content">
-                    <span class="news-category">Agricultura</span>
-                    <h3>Resultados de la cosecha de maíz</h3>
-                    <p>Análisis de los rindes obtenidos y las perspectivas para la comercialización del grano en la región.</p>
-                    <a href="nota-maiz.html" class="read-more">Leer más <span>&rarr;</span></a>
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/Alambrados1.jpg" alt="Alambrados virtuales" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Ganadería</span>
+                            <h3>Alambrados virtuales</h3>
+                            <p>Qué son y cómo funcionan los alambrados virtuales para el control del ganado.</p>
+                            <a href="alambrados.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/Alambrados1.jpg" alt="Alambrados virtuales" onerror="this.src='https://via.placeholder.com/400x250'">
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/alianza.png" alt="El futuro del Agro y la IA" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Innovación</span>
+                            <h3>El futuro del Agro y la IA</h3>
+                            <p>Cómo la inteligencia artificial y el análisis de datos están transformando la gestión de los campos.</p>
+                            <a href="innovacion.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-                <div class="news-content">
-                    <span class="news-category">Ganadería</span>
-                    <h3>Alambrados virtuales</h3>
-                    <p>Qué son y cómo funcionan los alambrados virtuales para el control del ganado.</p>
-                    <a href="alambrados.html" class="read-more">Leer más <span>&rarr;</span></a>
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/aapresid_2026.png" alt="Balance del Congreso Aapresid 2026" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Eventos</span>
+                            <h3>Balance del Congreso Aapresid 2026</h3>
+                            <p>Perspectivas muy positivas para la campaña 26/27, con un fuerte enfoque en innovación y agricultura regenerativa.</p>
+                            <a href="nota-aapresid.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/alianza.png" alt="El futuro del Agro y la IA" onerror="this.src='https://via.placeholder.com/400x250'">
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/el_nino_clima.png" alt="El Niño se consolida" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Clima</span>
+                            <h3>El Niño se consolida para la gruesa</h3>
+                            <p>Los pronósticos internacionales confirman la llegada del fenómeno para la segunda mitad del año, mejorando las reservas de agua.</p>
+                            <a href="nota-clima.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-                <div class="news-content">
-                    <span class="news-category">Innovación</span>
-                    <h3>El futuro del Agro y la IA</h3>
-                    <p>Cómo la inteligencia artificial y el análisis de datos están transformando la gestión de los campos.</p>
-                    <a href="innovacion.html" class="read-more">Leer más <span>&rarr;</span></a>
+                
+                <div class="swiper-slide">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="img/soja_mercados.png" alt="La soja repunta en Rosario" onerror="this.src='https://via.placeholder.com/400x250'">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category">Mercados</span>
+                            <h3>La soja repunta en Rosario</h3>
+                            <p>La incertidumbre climática global y la firme demanda externa impulsan los valores de la oleaginosa por encima de los $508.000.</p>
+                            <a href="nota-soja.html" class="read-more">Leer más <span>&rarr;</span></a>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/aapresid_2026.png" alt="Balance del Congreso Aapresid 2026" onerror="this.src='https://via.placeholder.com/400x250'">
-                </div>
-                <div class="news-content">
-                    <span class="news-category">Eventos</span>
-                    <h3>Balance del Congreso Aapresid 2026</h3>
-                    <p>Perspectivas muy positivas para la campaña 26/27, con un fuerte enfoque en innovación y agricultura regenerativa.</p>
-                    <a href="nota-aapresid.html" class="read-more">Leer más <span>&rarr;</span></a>
-                </div>
-            </article>
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/el_nino_clima.png" alt="El Niño se consolida" onerror="this.src='https://via.placeholder.com/400x250'">
-                </div>
-                <div class="news-content">
-                    <span class="news-category">Clima</span>
-                    <h3>El Niño se consolida para la gruesa</h3>
-                    <p>Los pronósticos internacionales confirman la llegada del fenómeno para la segunda mitad del año, mejorando las reservas de agua.</p>
-                    <a href="nota-clima.html" class="read-more">Leer más <span>&rarr;</span></a>
-                </div>
-            </article>
-            <article class="news-card">
-                <div class="news-img">
-                    <img src="img/soja_mercados.png" alt="La soja repunta en Rosario" onerror="this.src='https://via.placeholder.com/400x250'">
-                </div>
-                <div class="news-content">
-                    <span class="news-category">Mercados</span>
-                    <h3>La soja repunta en Rosario</h3>
-                    <p>La incertidumbre climática global y la firme demanda externa impulsan los valores de la oleaginosa por encima de los $508.000.</p>
-                    <a href="nota-soja.html" class="read-more">Leer más <span>&rarr;</span></a>
-                </div>
-            </article>
-                    </div>
+                
+            </div>
+            
+            <!-- Agregamos controles de Swiper -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next" style="color: #5cba2e;"></div>
+            <div class="swiper-button-prev" style="color: #5cba2e;"></div>
+        </div>
     </section>
 
-    <section class="contact-section" id="contacto">
-        <form class="contact-form" id="whatsapp-form">
+    <section class="contact-section" id="contacto" data-aos="fade-up">
+        <form class="contact-form" id="whatsapp-form" data-aos="zoom-in" data-aos-delay="200">
             <h2>Contactanos</h2>
             <p>Completá el formulario y te responderemos por WhatsApp.</p>
             <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -225,7 +256,43 @@
     <footer>
         <p>© 2026 Agroelsalado</p>
     </footer>
+    
+    <!-- Scripts CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script src="script.js"></script>
+    
+    <!-- Inicialización -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        const swiper = new Swiper('.news-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
