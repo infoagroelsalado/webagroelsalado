@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance del Congreso Aapresid 2026 - Agroelsalado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 120px 2% 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .article-page {
+            padding: 50px 8%;
+            width: 100%;
+            max-width: 800px;
+            flex-shrink: 0;
+            background: #ffffff;
+            min-height: 70vh;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .ad-sidebar {
+            flex: 1;
+            position: sticky;
+            top: 100px; /* Para que baje junto con la pantalla */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .ad-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .ad-image:hover {
+            transform: scale(1.02);
+        }
+        @media (max-width: 1150px) {
+            .ad-sidebar {
+                display: none; /* Ocultar publicidades en celulares o pantallas chicas */
+            }
+        }
+        .article-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .article-category {
+            color: #5cba2e;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .article-date {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        .article-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .article-content {
+            font-size: 1.15rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #3f7d20;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: rgba(92, 186, 46, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(92, 186, 46, 0.2);
+            color: #315f1c;
+        }
+        /* Ajuste de barra de navegaciÃ³n para pÃ¡ginas internas */
+        .navbar-solid {
+            background: #1f2937 !important;
+            padding: 15px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-solid">
+            <div class="logo">Agroelsalado</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#novedades">Novedades</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+
+
+        <!-- CONTENIDO CENTRAL -->
+        <main class="article-page">
+            <div class="article-header">
+                <span class="article-category">Eventos</span>
+                <h1 class="article-title">Balance del Congreso Aapresid 2026</h1>
+                <span class="article-date">10 Ago 2026</span>
+            </div>
+            
+            <!-- FOTO DE TRIGO AGREGADA -->
+            <img src="img/aapresid_2026.png" alt="Congreso Aapresid" class="article-image" onerror="this.src='https://images.unsplash.com/photo-1501493870936-9c2e41625521?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+
+            <div class="article-content">
+                <p><strong>El XXXIV Congreso Aapresid</strong>, realizado recientemente en Rosario, reunió a los principales actores del sector para debatir sobre el futuro del campo argentino. El evento dejó un fuerte balance positivo y grandes expectativas para la próxima campaña 2026/27.</p>
+                <p><strong>Ejes Centrales:</strong> Las disertaciones pusieron un foco especial en la agricultura regenerativa como respuesta a las demandas globales de sustentabilidad. Además, se destacó la acelerada adopción de inteligencia artificial y análisis de datos para optimizar el rendimiento y reducir el impacto ambiental.</p>
+                <p>Por otro lado, se observó un interés creciente en cultivos alternativos (como colza y camelina) que ya superan las 160.000 hectáreas certificadas en el país, demostrando la capacidad de adaptación y diversificación del productor argentino.</p>
+                
+                <a href="index.html#novedades" class="back-link">&larr; Volver a Novedades</a>
+            </div>
+        </main>
+
+
+    </div>
+
+    <footer>
+        <p>Â© 2026 Agroelsalado</p>
+    </footer>
+</body>
+</html>
